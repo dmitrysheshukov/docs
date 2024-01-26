@@ -139,9 +139,9 @@
 
      ```sh
      sudo stty -F /dev/ttyS0 9600 # Устанавливает рекомендуемую скорость терминала ttyS0 — 9600 бод.
-     sudo grub2-mkconfig -o /boot/grub2/grub.cfg # Генерирует конфигурационный файл для GRUB.
-     sudo systemctl start getty@ttyS0 # Запускает getty на терминале ttyS0.
-     sudo systemctl enable getty@ttyS0 # Указывает, что getty нужно запускать при каждом включении ОС.
+     sudo grub2-mkconfig -o /boot/grub2/grub.cfg # Генерирует конфигурационный файл для GRUB.я
+     sudo systemctl start serial-getty@ttyS0 # Запускает getty на терминале ttyS0.
+     sudo systemctl enable serial-getty@ttyS0 # Указывает, что getty нужно запускать при каждом включении ОС.
      ```
 
    - Debian/Ubuntu {#ubuntu}
@@ -149,8 +149,8 @@
      ```sh
      sudo stty -F /dev/ttyS0 9600 # Устанавливает рекомендуемую скорость терминала ttyS0 — 9600 бод.
      sudo update-grub # Генерирует конфигурационный файл для GRUB.
-     sudo systemctl start getty@ttyS0 # Запускает getty на терминале ttyS0.
-     sudo systemctl enable getty@ttyS0 # Указывает, что getty нужно запускать при каждом включении ОС.
+     sudo systemctl start serial-getty@ttyS0 # Запускает getty на терминале ttyS0.
+     sudo systemctl enable serial-getty@ttyS0 # Указывает, что getty нужно запускать при каждом включении ОС.
      ```
 
    {% endlist %}
